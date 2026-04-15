@@ -14,8 +14,19 @@ export default function SplineScene() {
         width='100%' 
         height='100%'
         title="3D Earth Background"
-        style={{ pointerEvents: 'none' }}  // allows clicking through to UI
+        style={{ pointerEvents: 'none' }}
       />
+      {/* Overlay to cover the Spline logo – adjusted lower and bigger */}
+      <div style={{
+        position: 'absolute',
+        bottom: '40px',     // lower (was 10px)
+        right: '15px',      // slightly more to the right
+        width: '150px',     // bigger (was 100px)
+        height: '50px',     // bigger (was 30px)
+        backgroundColor: '#000000',
+        zIndex: 2,
+        pointerEvents: 'none'
+      }} />
     </div>
   )
 }
